@@ -1,0 +1,555 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: '標楷體';
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left,
+.right {
+  writing-mode: vertical-lr;
+  letter-spacing: 1rem;
+  margin: 1rem;
+  font-size: 18px;
+}
+
+.chess-outer {
+  width: 700px;
+  height: 700px;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position: relative; */
+}
+
+.chess-inner {
+  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+}
+
+.chess-board .row {
+  display: flex;
+}
+
+/* 楚河漢界 */
+.chess-board .row5 .box {
+  border: none;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 70px;
+}
+
+.chess-board .box {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #000;
+  position: relative;
+}
+
+/* 斜線 start----------------------------------- */
+.chess-board .box1::before {
+  content: "";
+  width: calc(70px * 1.414);
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 33px;
+  left: -16.5px;
+}
+
+.chess-board .box2::before {
+  content: "";
+  width: calc(70px * 1.414);
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 33px;
+  left: -14.5px;
+}
+
+.chess-board .box3::before {
+  content: "";
+  width: calc(70px * 1.414);
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 33px;
+  left: -14.5px;
+}
+
+.chess-board .box4::before {
+  content: "";
+  width: calc(70px * 1.414);
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 33px;
+  left: -16.5px;
+}
+
+.chess-board .box5::before {
+  content: "";
+  width: calc(70px * 1.414);
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 33px;
+  left: -15.5px;
+}
+
+.chess-board .box6::before {
+  content: "";
+  width: calc(70px * 1.414);
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 34px;
+  left: -15.5px;
+}
+
+.chess-board .box7::before {
+  content: "";
+  width: calc(70px * 1.414);
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 32.5px;
+  left: -14.5px;
+}
+
+.chess-board .box8::before {
+  content: "";
+  width: calc(70px * 1.414);
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 33px;
+  left: -16.5px;
+}
+
+/* 斜線 end----------------------------------- */
+
+.car1 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -29px;
+  left: -25px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.car2 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -29px;
+  left: 45px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.horse1 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -29px;
+  left: -25px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.horse2 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -29px;
+  left: -25px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.elephant1 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -29px;
+  left: -25px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.elephant2 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -29px;
+  left: -25px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.soldier1 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -29px;
+  left: -25px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.soldier2 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -29px;
+  left: -25px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.general {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -29px;
+  left: -25px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.pao1 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -29px;
+  left: -25px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.pao2 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -29px;
+  left: -25px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.zu1 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -29px;
+  left: -25px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.zu2 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -29px;
+  left: -25px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.zu3 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -29px;
+  left: -25px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.zu4 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -29px;
+  left: -25px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.zu5 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -29px;
+  left: 45px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.bing1 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -29px;
+  left: -25px;
+  font-size: 28px;
+  color: red;
+  font-weight: bold;
+}
+
+.bing2 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -29px;
+  left: -25px;
+  font-size: 28px;
+  color: red;
+  font-weight: bold;
+}
+
+.bing3 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -29px;
+  left: -25px;
+  font-size: 28px;
+  color: red;
+  font-weight: bold;
+}
+
+.bing4 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -29px;
+  left: -25px;
+  font-size: 28px;
+  color: red;
+  font-weight: bold;
+}
+
+.bing5 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -29px;
+  left: 45px;
+  font-size: 28px;
+  color: red;
+  font-weight: bold;
+}
+
+.pao3 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -29px;
+  left: -25px;
+  font-size: 28px;
+  color: red;
+  font-weight: bold;
+}
+
+.pao4 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -29px;
+  left: -25px;
+  font-size: 28px;
+  color: red;
+  font-weight: bold;
+}
+
+.car3 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: 41px;
+  left: -25px;
+  font-size: 28px;
+  color: red;
+  font-weight: bold;
+}
+
+.car4 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: 41px;
+  left: 45px;
+  font-size: 28px;
+  color: red;
+  font-weight: bold;
+}
+
+.horse3 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: 41px;
+  left: -25px;
+  font-size: 28px;
+  color: red;
+  font-weight: bold;
+}
+
+.horse4 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: 41px;
+  left: -25px;
+  font-size: 28px;
+  color: red;
+  font-weight: bold;
+}
+
+.elephant3 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: 41px;
+  left: -25px;
+  font-size: 28px;
+  color: red;
+  font-weight: bold;
+}
+
+.elephant4 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: 41px;
+  left: -25px;
+  font-size: 28px;
+  color: red;
+  font-weight: bold;
+}
+
+.soldier3 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: 41px;
+  left: -25px;
+  font-size: 28px;
+  color: red;
+  font-weight: bold;
+}
+
+.soldier4 {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: 41px;
+  left: -25px;
+  font-size: 28px;
+  color: red;
+  font-weight: bold;
+}
+
+.king {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: 41px;
+  left: -25px;
+  font-size: 28px;
+  color: red;
+  font-weight: bold;
+}
