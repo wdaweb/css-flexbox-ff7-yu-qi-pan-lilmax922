@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlexBox - FF7</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    body {
+      height: 100vh;
+      background: url("./images/bg-full.jpg") no-repeat center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    body::after {
+      content: "";
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3));
+    }
+
+    #container {
+      width: 65%;
+      height: 65%;
+      display: flex;
+      border: 1px solid #333;
+      z-index: 10;
+    }
+
+    #left p {
+      text-align: center;
+    }
+
+    #left p:nth-child(2) {
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+
+    #right p:nth-child(1) {
+      font-size: 26px;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    #left {
+      width: 50%;
+      height: 100%;
+      background: url('./images/main.jpg') no-repeat center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      color: #fff;
+      flex-direction: column;
+    }
+
+    #left .card {
+      width: 60%;
+      height: 50%;
+      font-size: 16px;
+    }
+
+    #left img {
+      width: 150px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    #right {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    #cloud img {
+      width: 45%;
+      object-fit: cover;
+      object-position: 50% 45px;
+    }
+
+    #tifa img {
+      width: 44%;
+      object-fit: cover;
+      object-position: 10px 45px;
+    }
+
+    #right #cloud {
+      height: 50%;
+      padding-left: 15px;
+      display: flex;
+      background-color: gray;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #right .decs {
+      text-align: left;
+    }
+
+    #right #tifa {
+      height: 50%;
+      display: flex;
+      color: #fff;
+      background: #000;
+      justify-items: center;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="left">
+      <div class="card">
+        <img src="./images/ps4-ff7.png">
+        <p>AVAILABLE NOW</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quasi suscipit voluptates repellat non sed
+          nemo ratione libero, ab eius quia tempora sapiente eveniet aliquam dolor velit reprehenderit consequuntur
+        </p>
+      </div>
+    </div>
+    <div id="right">
+      <div id="cloud">
+        <div class="desc">
+          <p>Cloud</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero molestias alias, nostrum nisi, corrupti
+            impedit
+            aliquid voluptatibus cum deserunt quaerat consequuntur maxime quos, animi aut. Unde, ut. Repellendus, veniam
+            aut!</p>
+        </div>
+        <img src="./images/cloud.png">
+      </div>
+      <div id="tifa">
+        <img src="./images/tifa.png">
+        <div class="desc">
+          <p>Tifa</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, rem consectetur doloremque voluptates modi
+            doloribus. Labore, earum praesentium ipsam magnam veritatis reprehenderit corrupti rem. Sequi dolores
+            reprehenderit est enim tempore.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
